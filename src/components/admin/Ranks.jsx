@@ -26,7 +26,7 @@ const Ranks = () => {
   // Function to fetch records from the API
   const fetchRecords = async () => {
     try {
-      const response = await axios.get("http://localhost:8081/admin/records");
+      const response = await axios.get("http://https://air2ca.onrender.com/admin/records");
       setData(response.data);
       setLoading(false); // Set loading to false once records are fetched
     } catch (error) {
@@ -88,14 +88,14 @@ const Ranks = () => {
     try {
       if (selectedRecord) {
         // Edit an existing record if selectedRecord is not null
-        await axios.put(`http://localhost:8081/admin/update-record/${selectedRecord.id}`, formData, {
+        await axios.put(`http://https://air2ca.onrender.com/admin/update-record/${selectedRecord.id}`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         });
       } else {
         // Add a new record if selectedRecord is null
-        await axios.post("http://localhost:8081/admin/add-record", formData, {
+        await axios.post("http://https://air2ca.onrender.com/admin/add-record", formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -114,7 +114,7 @@ const Ranks = () => {
   const handleDelete = async (record) => {
     try {
       // Make an Axios DELETE request to delete a record
-      await axios.delete(`http://localhost:8081/admin/delete-record/${record.id}`);
+      await axios.delete(`http://https://air2ca.onrender.com/admin/delete-record/${record.id}`);
       setLoading(true); // Set loading to true before refetching records
       fetchRecords(); // Refetch records after deleting
     } catch (error) {

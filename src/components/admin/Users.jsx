@@ -12,7 +12,7 @@ const Users = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/admin/users');
+      const response = await axios.get('http://https://air2ca.onrender.com/admin/users');
       if (response.status === 200) {
         setUsers(response.data);
       }
@@ -27,7 +27,7 @@ const Users = () => {
 
   const handleOpenConfirmationDialog = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8081/admin/delete-user/${id}`);
+      const response = await axios.delete(`http://https://air2ca.onrender.com/admin/delete-user/${id}`);
       if (response.status === 200) {
         setUsers((prevUsers) => prevUsers.filter((user) => user.id !== id));
         console.log('User deleted successfully');

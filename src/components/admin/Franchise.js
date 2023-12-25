@@ -13,7 +13,7 @@ const Franchise = () => {
 
   const fetchFranchises = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/admin/franchise');
+      const response = await axios.get('http://https://air2ca.onrender.com/admin/franchise');
       if (response.status === 200) {
         setFranchises(response.data);
       }

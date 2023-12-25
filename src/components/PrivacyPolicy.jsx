@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
 
   const fetchPrivacyInfo = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/admin/privacy'); // Update the URL as needed
+      const response = await axios.get('http://https://air2ca.onrender.com/admin/privacy'); // Update the URL as needed
       setPrivacyData(response.data);
       setLoading(false);
     } catch (error) {

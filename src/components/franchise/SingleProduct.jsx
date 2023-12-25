@@ -56,7 +56,7 @@ export default function SingleProduct() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8081/admin/products/${id}`)
+      .get(`http://https://air2ca.onrender.com/admin/products/${id}`)
       .then((response) => {
         const variantCombinations = JSON.parse(
           response.data.products.variantCombinations

@@ -17,7 +17,7 @@ const Reviews = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get("http://localhost:8081/admin/comments");
+      const response = await axios.get("http://https://air2ca.onrender.com/admin/comments");
       setData(response.data);
       setLoading(false);
     } catch (error) {
@@ -50,9 +50,9 @@ const Reviews = () => {
       setPostLoading(true);
 
       if (selectedRecord) {
-        await axios.put(`http://localhost:8081/update-comments/${selectedRecord.id}`, values);
+        await axios.put(`http://https://air2ca.onrender.com/update-comments/${selectedRecord.id}`, values);
       } else {
-        await axios.post("http://localhost:8081/admin/add-comment", values);
+        await axios.post("http://https://air2ca.onrender.com/admin/add-comment", values);
       }
 
       setIsModalVisible(false);
@@ -67,7 +67,7 @@ const Reviews = () => {
 
   const handleDelete = async (record) => {
     try {
-      await axios.delete(`http://localhost:8081/admin/delete-comments/${record.id}`);
+      await axios.delete(`http://https://air2ca.onrender.com/admin/delete-comments/${record.id}`);
       setLoading(true);
       fetchReviews();
     } catch (error) {

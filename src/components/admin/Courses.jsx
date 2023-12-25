@@ -12,7 +12,7 @@ const Courses = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/admin/courses');
+      const response = await axios.get('http://https://air2ca.onrender.com/admin/courses');
       if (response.status === 200) {
         setData(response.data);
       }
@@ -27,7 +27,7 @@ const Courses = () => {
 
   const handleOpenConfirmationDialog = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8081/admin/delete-course/${id}`);
+      const response = await axios.delete(`http://https://air2ca.onrender.com/admin/delete-course/${id}`);
       if (response.status === 200) {
         setData((prevData) => prevData.filter((course) => course.id !== id));
         console.log('Course deleted successfully');

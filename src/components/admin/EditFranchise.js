@@ -33,7 +33,7 @@ export default function EditFranchise() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8081/admin/franchise/${id}`
+          `http://https://air2ca.onrender.com/admin/franchise/${id}`
         );
 
         if (response.status === 200) {
@@ -52,7 +52,7 @@ export default function EditFranchise() {
   const handleSubmit = async (e) => {
     try {
       const response = await axios.put(
-        `http://localhost:8081/admin/franchise/${id}`,
+        `http://https://air2ca.onrender.com/admin/franchise/${id}`,
         formData
       );
 

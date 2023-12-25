@@ -31,7 +31,7 @@ export default function AddFranchise() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8081/admin/add-franchise",
+        "http://https://air2ca.onrender.com/admin/add-franchise",
         formData
       );
 

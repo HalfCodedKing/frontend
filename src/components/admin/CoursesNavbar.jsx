@@ -11,7 +11,7 @@ const CoursesNavbar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8081/admin/courses")
+      .get("http://https://air2ca.onrender.com/admin/courses")
       .then((response) => {
         setCourses(response.data);
         setFirstThreeCourses(response.data.slice(0, 3));

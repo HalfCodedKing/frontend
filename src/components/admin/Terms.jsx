@@ -20,7 +20,7 @@ const Terms = () => {
 
   const fetchTerms = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/admin/terms');
+      const response = await axios.get('http://https://air2ca.onrender.com/admin/terms');
       setData(response.data);
       setLoading(false);
     } catch (error) {
@@ -51,10 +51,10 @@ const Terms = () => {
 
       if (selectedRecord) {
         // Handle edit logic here
-        await axios.put(`http://localhost:8081/admin/update-term/${selectedRecord.id}`, values);
+        await axios.put(`http://https://air2ca.onrender.com/admin/update-term/${selectedRecord.id}`, values);
       } else {
         // Handle add logic here
-        await axios.post('http://localhost:8081/admin/add-term', values);
+        await axios.post('http://https://air2ca.onrender.com/admin/add-term', values);
       }
 
       setIsModalVisible(false);
@@ -70,7 +70,7 @@ const Terms = () => {
   const handleDelete = async (record) => {
     try {
       // Handle delete logic here
-      await axios.delete(`http://localhost:8081/admin/delete-term/${record.id}`);
+      await axios.delete(`http://https://air2ca.onrender.com/admin/delete-term/${record.id}`);
       setLoading(true);
       fetchTerms();
     } catch (error) {

@@ -13,7 +13,7 @@ const Products = () => {
 
   const fetchSelectedProductIds = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/franchise/products');
+      const response = await axios.get('http://https://air2ca.onrender.com/franchise/products');
 
       if (response.status === 200) {
         const productsWithPrices = response.data;
@@ -38,7 +38,7 @@ const Products = () => {
       try {
         setProductsData([]);
         const productDetailsPromises = selectedProductIds.map(async (id) => {
-          const response = await axios.get(`http://localhost:8081/franchise/products/${id}`);
+          const response = await axios.get(`http://https://air2ca.onrender.com/franchise/products/${id}`);
           if (response.status === 200) {
             return {
               id, // Generate a unique id based on the product_id

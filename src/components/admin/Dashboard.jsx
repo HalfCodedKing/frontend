@@ -185,7 +185,7 @@ function Dashboard() {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:8081/logout");
+      await axios.post("http://https://air2ca.onrender.com/logout");
       // Clear the token cookie
       document.cookie =
         "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";

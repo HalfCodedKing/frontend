@@ -148,7 +148,7 @@ export default function AddProducts() {
     // Fetch courses when the component mounts
     const fetchCourses = async () => {
       try {
-        const response = await axios.get("http://localhost:8081/admin/courses");
+        const response = await axios.get("http://https://air2ca.onrender.com/admin/courses");
         console.log("Response from server:", response.data);
         const courses = response.data;
         if (courses.length > 0) {
@@ -432,7 +432,7 @@ export default function AddProducts() {
     try {
       // Send the FormData to the server
       const response = await axios.post(
-        "http://localhost:8081/admin/add-product",
+        "http://https://air2ca.onrender.com/admin/add-product",
         formData,
         {
           headers: {

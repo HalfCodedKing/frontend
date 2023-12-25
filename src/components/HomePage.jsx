@@ -44,7 +44,7 @@ const HomePage = () => {
 
     // Fetch products data from the server
     axios
-      .get("http://localhost:8081/admin/products")
+      .get("http://https://air2ca.onrender.com/admin/products")
       .then((response) => {
         const products = response.data;
 

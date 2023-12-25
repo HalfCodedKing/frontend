@@ -57,7 +57,7 @@ const StudentDetails = () => {
       setLoading(true);
       const values = await form.validateFields();
       const response = await axios.post(
-        "http://localhost:8081/franchise/add-student",
+        "http://https://air2ca.onrender.com/franchise/add-student",
         { ...values, avatar: values.avatar[0] }
       );
 

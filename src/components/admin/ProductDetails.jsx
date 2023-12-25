@@ -68,7 +68,7 @@ export default function ProductDetails() {
   useEffect(() => {
     // Fetch product details based on the product ID from the URL params
     axios
-      .get(`http://localhost:8081/admin/products/${productId}`)
+      .get(`http://https://air2ca.onrender.com/admin/products/${productId}`)
       .then((response) => {
         const variantCombinations = JSON.parse(
           response.data.products.variantCombinations

@@ -17,7 +17,7 @@ export default function Products() {
   // Function to fetch product data from the backend
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/admin/products');
+      const response = await axios.get('http://https://air2ca.onrender.com/admin/products');
       if (response.status === 200) {
         setProducts(response.data);
       }
@@ -60,7 +60,7 @@ export default function Products() {
       try {
         console.log(`Deleting product with ID: ${deleteProductId}`);
 
-        const response = await axios.delete(`http://localhost:8081/admin/products/${deleteProductId}`);
+        const response = await axios.delete(`http://https://air2ca.onrender.com/admin/products/${deleteProductId}`);
         console.log('Delete response:', response);
 
         if (response.status === 200) {
