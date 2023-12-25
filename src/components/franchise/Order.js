@@ -17,7 +17,7 @@ function Order() {
 
   const fetchOrderDetails = async () => {
     try {
-      const response = await axios.get('http://https://air2ca.onrender.com/franchise/order-details');
+      const response = await axios.get('https://air2ca.onrender.com/franchise/order-details');
       setOrderDetails(response.data);
     } catch (error) {
       console.error('Error fetching order details:', error);

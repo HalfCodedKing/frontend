@@ -20,7 +20,7 @@ const Privacy = () => {
 
   const fetchPrivacyData = async () => {
     try {
-      const response = await axios.get('http://https://air2ca.onrender.com/admin/privacy');
+      const response = await axios.get('https://air2ca.onrender.com/admin/privacy');
       setData(response.data);
       setLoading(false);
     } catch (error) {
@@ -53,10 +53,10 @@ const Privacy = () => {
 
       if (selectedRecord) {
         // If selectedRecord is not null, update existing privacy data
-        await axios.put(`http://https://air2ca.onrender.com/admin/update-privacy/${selectedRecord.id}`, values);
+        await axios.put(`https://air2ca.onrender.com/admin/update-privacy/${selectedRecord.id}`, values);
       } else {
         // If selectedRecord is null, add new privacy data
-        await axios.post('http://https://air2ca.onrender.com/admin/add-privacy', values);
+        await axios.post('https://air2ca.onrender.com/admin/add-privacy', values);
       }
 
       setIsModalVisible(false);
@@ -72,7 +72,7 @@ const Privacy = () => {
   const handleDelete = async (record) => {
     try {
       // Delete the privacy data
-      await axios.delete(`http://https://air2ca.onrender.com/admin/delete-privacy/${record.id}`);
+      await axios.delete(`https://air2ca.onrender.com/admin/delete-privacy/${record.id}`);
       setLoading(true);
       fetchPrivacyData();
     } catch (error) {

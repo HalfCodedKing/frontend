@@ -44,7 +44,7 @@ const RegisterPage = () => {
     }
 
     axios
-      .post("http://https://air2ca.onrender.com/register", values)
+      .post("https://air2ca.onrender.com/register", values)
       .then((res) => {
         navigate("/");
       })

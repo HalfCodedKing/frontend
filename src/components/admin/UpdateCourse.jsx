@@ -38,7 +38,7 @@ const UpdateCourse = () => {
     const fetchCourseDetails = async () => {
       try {
         const response = await axios.get(
-          `http://https://air2ca.onrender.com/admin/courses/${id}`
+          `https://air2ca.onrender.com/admin/courses/${id}`
         );
 
         if (response.status === 200) {
@@ -103,7 +103,7 @@ const UpdateCourse = () => {
 
   const handleSubmit = async (e) => {
     try {
-      const response = await axios.put(`http://https://air2ca.onrender.com/admin/update-course/${id}`, formData)
+      const response = await axios.put(`https://air2ca.onrender.com/admin/update-course/${id}`, formData)
 
       if (response.status === 200) {
         message.success("Course updated successfully");

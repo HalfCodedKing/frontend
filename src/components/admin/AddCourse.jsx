@@ -90,7 +90,7 @@ const AddCourse = () => {
       formDataWithImage.append("courseImage", fileList[0]?.originFileObj);
       formDataWithImage.append("courseData", JSON.stringify(formData));
       const response = await axios.post(
-        "http://https://air2ca.onrender.com/admin/add-course",
+        "https://air2ca.onrender.com/admin/add-course",
         formData
       );
 

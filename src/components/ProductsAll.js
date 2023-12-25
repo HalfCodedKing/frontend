@@ -27,7 +27,7 @@ const ProductsAll = () => {
 
   useEffect(() => {
     // Fetch product data from the API
-    axios.get('http://https://air2ca.onrender.com/admin/products').then((response) => {
+    axios.get('https://air2ca.onrender.com/admin/products').then((response) => {
       setProducts(response.data);
       setFilteredProducts(response.data);
       setLoading(false);

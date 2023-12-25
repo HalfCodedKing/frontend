@@ -13,7 +13,7 @@ const TermsAndConditions = () => {
 
   const fetchTerms = async () => {
     try {
-      const response = await axios.get('http://https://air2ca.onrender.com/admin/terms'); // Update the URL as needed
+      const response = await axios.get('https://air2ca.onrender.com/admin/terms'); // Update the URL as needed
       setTermsData(response.data);
       setLoading(false);
     } catch (error) {

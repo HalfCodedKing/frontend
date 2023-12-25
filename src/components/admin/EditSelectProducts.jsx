@@ -19,7 +19,7 @@ export default function EditSelectProducts() {
     const fetchSelectedProducts = async () => {
       try {
         const response = await axios.get(`
-          http://https://air2ca.onrender.com/admin/product/${id}`);
+          https://air2ca.onrender.com/admin/product/${id}`);
         if (response.status === 200) {
           const selectedProductsData = response.data;
 
@@ -57,7 +57,7 @@ export default function EditSelectProducts() {
     const fetchAllProducts = async () => {
       try {
         const response = await axios.get(
-          "http://https://air2ca.onrender.com/admin/products"
+          "https://air2ca.onrender.com/admin/products"
         );
         if (response.status === 200) {
           setProducts(response.data);
@@ -119,7 +119,7 @@ export default function EditSelectProducts() {
           updatedDiscountPrices[product.id] || product.discountPrice,
       }));
 
-      await axios.post("http://https://air2ca.onrender.com/admin/update_selected_products", {
+      await axios.post("https://air2ca.onrender.com/admin/update_selected_products", {
         id,
         selectedProductIds,
         updatedProducts,

@@ -9,7 +9,7 @@ const Order = () => {
 
   const fetchOrderDetails = async () => {
     try {
-      const response = await axios.get('http://https://air2ca.onrender.com/admin/order-details');
+      const response = await axios.get('https://air2ca.onrender.com/admin/order-details');
       
       // Add unique identifier to each row
       const ordersWithId = response.data.map((order, index) => ({

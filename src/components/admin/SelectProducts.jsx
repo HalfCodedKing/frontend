@@ -42,7 +42,7 @@ const SelectProducts = () => {
         enteredDiscountPrices: enteredDiscountPrices,
       };
 
-      await axios.post('http://https://air2ca.onrender.com/admin/select', requestData);
+      await axios.post('https://air2ca.onrender.com/admin/select', requestData);
       navigate('/admin/franchise');
       console.log('Selection saved successfully');
     } catch (error) {
@@ -53,7 +53,7 @@ const SelectProducts = () => {
   // Function to fetch product data from the backend
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://https://air2ca.onrender.com/admin/product');
+      const response = await axios.get('https://air2ca.onrender.com/admin/product');
       if (response.status === 200) {
         setProducts(response.data);
 
